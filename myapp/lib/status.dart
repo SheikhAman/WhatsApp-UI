@@ -48,6 +48,22 @@ class StatusScreen extends StatelessWidget {
           ),
         ),
         Divider(),
+        Padding(
+          padding: const EdgeInsets.only(top: 8.0),
+          child: ListTile(
+            contentPadding: EdgeInsets.only(left: 5, right: 7),
+            leading: Container(
+              width: 70,
+              height: 100,
+              child: CircleAvatar(
+                backgroundImage: AssetImage(images),
+              ),
+            ),
+            title: Text('Sami Ka Update'),
+            subtitle: Text('1 hours ago'),
+          ),
+        ),
+        Divider(),
       ],
     );
   }
