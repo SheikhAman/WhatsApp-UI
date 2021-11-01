@@ -1,10 +1,9 @@
 import 'package:flutter/material.dart';
 
-class ChatScreen extends StatelessWidget {
+class CallsScreen extends StatelessWidget {
   final images;
   final title;
-  final msg;
-  ChatScreen({this.images, this.title, this.msg});
+  CallsScreen({this.images, this.title});
 
   @override
   Widget build(BuildContext context) {
@@ -13,7 +12,7 @@ class ChatScreen extends StatelessWidget {
         Padding(
           padding: const EdgeInsets.only(top: 8.0),
           child: ListTile(
-            contentPadding: EdgeInsets.only(left: 5, right: 7),
+            contentPadding: EdgeInsets.only(left: 5, right: 17),
             leading: Container(
               width: 70,
               height: 100,
@@ -22,21 +21,20 @@ class ChatScreen extends StatelessWidget {
               ),
             ),
             title: Text(title),
-            subtitle: Text('Mama game a ay'),
-            trailing: Column(
+            subtitle: Row(
               children: [
-                Text('11.00'),
-                Container(
-                  height: 24,
-                  child: CircleAvatar(
-                    backgroundColor: Theme.of(context).primaryColorLight,
-                    child: Text(
-                      '7',
-                      style: TextStyle(color: Colors.white),
-                    ),
-                  ),
+                Icon(
+                  Icons.call_received,
+                  size: 20,
+                  color: Colors.green,
                 ),
+                Text('Yesterday,10.18'),
               ],
+            ),
+            trailing: Icon(
+              Icons.call,
+              color: Theme.of(context).primaryColor,
+              size: 25,
             ),
           ),
         ),

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:myapp/calls.dart';
 import 'package:myapp/chats.dart';
 import 'package:myapp/status.dart';
 
@@ -88,11 +89,11 @@ class _HomeScreenState extends State<HomeScreen>
           itemBuilder: (context, index) {
             return Column(
               children: [
-                ChatScreen(
+                CallsScreen(
                   images: 'images/p1.jpg',
                   title: 'Sami Hossen',
                 ),
-                ChatScreen(
+                CallsScreen(
                   images: 'images/p2.jpg',
                   title: 'Farhad Hossen',
                 ),
@@ -101,6 +102,17 @@ class _HomeScreenState extends State<HomeScreen>
           },
         ),
       ]),
+      floatingActionButton: _tabController.index == 1
+          ? FloatingActionButton(
+              child: Icon(Icons.message),
+              backgroundColor: Theme.of(context).primaryColorLight,
+              onPressed: () {},
+            )
+          : FloatingActionButton(
+              child: Icon(Icons.camera_alt),
+              backgroundColor: Theme.of(context).primaryColorLight,
+              onPressed: () {},
+            ),
     );
   }
 }
