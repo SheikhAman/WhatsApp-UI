@@ -22,7 +22,7 @@ class ChatScreen extends StatelessWidget {
               ),
             ),
             title: Text(title),
-            subtitle: Text('Mama game a ay'),
+            subtitle: Text('Mama Akash re game a dak de'),
             trailing: Column(
               children: [
                 Text('11.00'),
